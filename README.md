@@ -45,7 +45,7 @@ var searchbox = L.control.searchbox({
 ```javascript
 var searchbox = L.control.searchbox({
     position: 'topright',
-    expand: 'left'
+    expand: 'left',
     scrollbar: true,
     clearButton: true,
     maxHeight: '40vh',
