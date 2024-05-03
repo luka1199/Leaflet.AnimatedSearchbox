@@ -63,11 +63,11 @@ var searchbox = L.control.searchbox({
 - `width`: Sets the width of the input field of the searchbox. (Example: `'450px'`)  
 - `iconPath`: Sets the path for the search icon (Default: `'img/search_icon.png'`).
 - `clearIconPath`: Sets the path for the clear icon, when clearButton = true (Default: automatically calculated based on iconPath).
-- `autocompleteFeatures`: Activates the given features (Default: `['setValueOnClick']`).  
 - `listHeight`: sets height of dropdown list (Default: `'auto'`),
 - `maxHeight`: sets the maximun height of dropdown list (Default: `'50vh'`),
 - `scrollbar`: usefull in conjunction with maxHeigh to present all items in list within view (Default: `'false'`),
 - `clearButton`: add a clear button (Default: `'false'`),
+- `autocompleteFeatures`: Activates the given features (Default: `['setValueOnClick']`).  
 Possible features:
   - `'setValueOnClick'`: Set the value of the searchbox to the value of the clicked autocomplete list item.
   - `'arrowKeyNavigation'`: Sets input value from dropdown list using up and down keys
