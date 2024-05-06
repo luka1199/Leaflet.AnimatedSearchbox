@@ -4,6 +4,10 @@ A simple Leaflet plugin that provides a collapsible search box.
 
 ![demo](assets/new_demo_cropped.gif)
 
+Extend it to support up/down keys and scroll
+
+![demo](assets/demo_scroll_arrow.gif)
+
 ### [Demos](https://luka1199.github.io/Leaflet.AnimatedSearchBox/examples/)
 
 - [Basic Demo](https://luka1199.github.io/Leaflet.AnimatedSearchBox/examples/example1.html)
@@ -36,6 +40,19 @@ var searchbox = L.control.searchbox({
 }).addTo(map);
 ```
 
+- with up/down and scroll support:
+
+```javascript
+var searchbox = L.control.searchbox({
+    position: 'topright',
+    expand: 'left',
+    scrollbar: true,
+    clearButton: true,
+    maxHeight: '40vh',
+    autocompleteFeatures: ['setValueOnClick', 'arrowKeyNavigation'],
+}).addTo(map);
+```
+
 ### Options
 
 - `position`: Sets the position of the searchbox (Default: `'topright'`).  
@@ -45,10 +62,15 @@ var searchbox = L.control.searchbox({
 - `class`: Adds custom classes to the container of the searchbox.  
 - `width`: Sets the width of the input field of the searchbox. (Example: `'450px'`)  
 - `iconPath`: Sets the path for the search icon (Default: `'img/search_icon.png'`).
-- `autocompleteFeatures`: Activates the given features (Default: `[]`).  
+- `clearIconPath`: Sets the path for the clear icon, when clearButton = true (Default: automatically calculated based on iconPath).
+- `listHeight`: sets height of dropdown list (Default: `'auto'`),
+- `maxHeight`: sets the maximun height of dropdown list (Default: `'50vh'`),
+- `scrollbar`: usefull in conjunction with maxHeigh to present all items in list within view (Default: `'false'`),
+- `clearButton`: add a clear button (Default: `'false'`),
+- `autocompleteFeatures`: Activates the given features (Default: `['setValueOnClick']`).  
 Possible features:
   - `'setValueOnClick'`: Set the value of the searchbox to the value of the clicked autocomplete list item.
-  - `'arrowKeyNavigation'`: Coming soon
+  - `'arrowKeyNavigation'`: Sets input value from dropdown list using up and down keys
   - `'setValueOnHover'`: Coming soon
   - `'setValueOnEnter'`: Coming soon
 
